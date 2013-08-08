@@ -4,12 +4,12 @@ var http = require("http"),
 var port = 8080;
 
 function start(route) {
-	function onRequest(request, response) {
-		var parsedUrl = url.parse(request.url, true);
+	function onRequest(req, res) {
+		var parsedUrl = url.parse(req.url, true);
 
-		console.log("Request for " + parsedUrl.pathname + " received");
+		console.log("req for " + parsedUrl.pathname + " received");
 
-		route(parsedUrl, request, response);
+		route(parsedUrl, req, res);
 	}
 
 	http.createServer(onRequest).listen(port);

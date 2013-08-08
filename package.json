@@ -1,0 +1,7 @@
+{
+    "name": "askitapi",
+    "description": "Attempt at creating a backend API for the askit product.",
+    "author": "Nicholas Teo",
+    "dependencies": [],
+    "main": "askitapi.js"
+}
